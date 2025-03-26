@@ -3,23 +3,23 @@
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
   font-weight: normal;
 }
 
-a,
-.green {
+a, .green {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
   padding: 3px;
 }
 
-@media (hover: hover) {
+/* @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
   }
-}
+} */
 
 @media (min-width: 1024px) {
   body {
@@ -27,9 +27,9 @@ a,
     place-items: center;
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  /* #app {
+    display: flex;
+    flex-direction: column;
     padding: 0 2rem;
-  }
+  } */
 }
