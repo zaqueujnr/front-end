@@ -4,24 +4,22 @@ import { RouterLink } from 'vue-router';
 
 <template>
   <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/about">Sobre Nós</RouterLink>
-        <RouterLink to="/">Vagas</RouterLink>
-      </nav>
-    </div>
+    <nav>
+      <RouterLink to="/about">Sobre Nós</RouterLink>
+      <RouterLink to="/vagas">Vagas</RouterLink>
+    </nav>
   </header>
+
 </template>
 
 <style scoped>
-
 header {
   background-color: antiquewhite;
   line-height: 3;
   /* max-height: 100vh; */
   width: 100%;
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   z-index: 1000;
 }
@@ -76,5 +74,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 } */
- 
 </style>
