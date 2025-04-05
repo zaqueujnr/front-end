@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import WorkCardComponent from '@/components/features/WorkCardComponent.vue';
 import WorkCardList from '@/components/features/WorkCardList.vue';
 import DynamicGridComponent from '@/components/layout/DynamicGridComponent.vue';
 import ButtonComponent from '@/components/ui/ButtonComponent/ButtonComponent.vue';
@@ -21,7 +20,6 @@ const works = reactive([
     <ButtonComponent label="Enviar" />
 
     <DynamicGridComponent>
-
       <WorkCardList :works="works" />
     </DynamicGridComponent>
 
