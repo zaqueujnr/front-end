@@ -17,4 +17,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    host: '0.0.0.0', // 👈 permite acesso externo (tipo localhost:3000 no host)
+    port: 3003        // 👈 garante que vai rodar nessa porta
+  }
 })

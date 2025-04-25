@@ -3,16 +3,16 @@ import { computed } from 'vue';
 
 const props = defineProps({
     label: String,
-    color: { type: String, default: 'blue' },
+    color: { type: String, default: 'primary' },
     variant: { type: String, default: 'solid' },
-    rounded: { type: String, default: 'md' }
+    rounded: { type: String, default: 'md' },
+    spacing: { type: String }
 });
 
 
 const emit = defineEmits(['click']);
 
 const computedClasses = computed(() => {
-    const baseClasses = 'px-4 py-2 text-sm font-medium transition focus:outline-none text-white';
     const roundedClasses = {
         'rounded-sm': props.rounded === 'sm',
         'rounded-md': props.rounded === 'md',
@@ -24,12 +24,12 @@ const computedClasses = computed(() => {
         [`btn-${props.color}-outline`]: props.variant === 'outline',
     };
 
-    return [baseClasses, roundedClasses, variantClasses];
+    return [roundedClasses, variantClasses];
 });
 </script>
 
 <template>
-    <button :class="[computedClasses]" @click="emit('click')">
+    <button :class="['btn', computedClasses, props.spacing]" @click="emit('click')">
         <slot>{{ label }}</slot>
     </button>
 </template>

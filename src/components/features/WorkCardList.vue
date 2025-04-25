@@ -1,18 +1,11 @@
 <script setup lang='ts'>
+import type Work from '@/entity/Work';
 import WorkCardComponent from './WorkCardComponent.vue';
 
-defineProps({
-    works: {
-        type: Array,
-        required: true
-    },
-});
-
+defineProps(['workList']);
 </script>
 
 <template>
-    <WorkCardComponent v-for="(item, index) in (works as any)" :key="index" :description="item.description"
+    <WorkCardComponent v-for="(item, index) in (workList.works as Work[])" :key="item.workId" :index="index" :company-name="item.company.name || '############'" :description="item.description"
         :date-end="item.dateEnd" :date-init="item.dateInit" :type-contract="item.typeContract" :time="item.time" />
 </template>
-
-<style scoped></style>

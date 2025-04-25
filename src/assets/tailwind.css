@@ -1,20 +1,93 @@
 @import "tailwindcss";
+@tailwind utilities;
 
-.btn-blue {
-    @apply bg-blue-600 hover:bg-blue-700 active:bg-blue-800;
-  }
-  .btn-red {
-    @apply bg-red-600 hover:bg-red-700 active:bg-red-800;
-  }
-  .btn-green {
-    @apply bg-green-600 hover:bg-green-700 active:bg-green-800;
-  }
-  .btn-yellow {
-    @apply bg-yellow-600 hover:bg-yellow-700 active:bg-yellow-800;
-  }
-  .btn-blue-outline {
-    @apply border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white
+  @theme {
+  --color-primary-100: #D6E4FF;
+  --color-primary-200: #ADC8FF;
+  --color-primary-300: #84A9FF;
+  --color-primary-400: #6690FF;
+  --color-primary-500: #3366FF;
+  --color-primary-600: #254EDB;
+  --color-primary-700: #1939B7;
+  --color-primary-800: #102693;
+  --color-primary-900: #091A7A;
+  --color-success-100: #F0FDD5;
+  --color-success-200: #DDFBAD;
+  --color-success-300: #C1F382;
+  --color-success-400: #A4E761;
+  --color-success-500: #7CD831;
+  --color-success-600: #5EB923;
+  --color-success-700: #459B18;
+  --color-success-800: #2E7D0F;
+  --color-success-900: #1F6709;
+  --color-info-100: #DAF4FF;
+  --color-info-200: #B5E6FF;
+  --color-info-300: #90D4FF;
+  --color-info-400: #75C3FF;
+  --color-info-500: #47A6FF;
+  --color-info-600: #3381DB;
+  --color-info-700: #2360B7;
+  --color-info-800: #164393;
+  --color-info-900: #0D2F7A;
+  --color-warning-100: #FFF8D3;
+  --color-warning-200: #FFEFA6;
+  --color-warning-300: #FFE47A;
+  --color-warning-400: #FFDA59;
+  --color-warning-500: #FFC823;
+  --color-warning-600: #DBA519;
+  --color-warning-700: #B78511;
+  --color-warning-800: #93670B;
+  --color-warning-900: #7A5106;
+  --color-danger-100: #FFE9D2;
+  --color-danger-200: #FFCEA4;
+  --color-danger-300: #FFAC78;
+  --color-danger-400: #FF8C56;
+  --color-danger-500: #FF561E;
+  --color-danger-600: #DB3915;
+  --color-danger-700: #B7210F;
+  --color-danger-800: #930E09;
+  --color-danger-900: #7A0509;
+  --color-background: #00dc82;
+  --color-text: #00dc82;
   }
 
-      
+  .btn {
+    @apply w-full px-4 py-2 text-sm font-medium transition focus:outline-none text-white;
+  }
+
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 active:bg-primary-700;
+  }
+  
+  .btn-primary-outline {
+    @apply border border-primary-500 text-primary-500 hover:bg-primary-500 active:bg-primary-600 hover:text-white;
+  }
+
+  .input {
+    @apply w-full pl-10 pr-4 py-2 border border-gray-200 rounded-md placeholder:text-gray-500 placeholder:italic focus:outline-none focus:ring-2 focus:ring-primary-500;
+  }
+  
+  .icon-input {
+    @apply w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-500;
+  }
+
+  .nav-bar {
+    @apply flex w-full bg-primary-600 px-20  items-center 
+  }
+
+  .nav-bar a {
+    @apply px-10 py-4 text-white font-normal text-lg hover:text-primary-200 transition-colors duration-200 
+  }
+
+  .nav-link:hover{
+    @apply bg-primary-500 text-white;
+  }
+  
+  .nav-link.active {
+    @apply bg-primary-500 text-white font-semibold;
+  }
+  
+  .dynamic-grid {
+    @apply mt-20 pb-8 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  max-h-[100vh] overflow-y-auto 
+  }
       
