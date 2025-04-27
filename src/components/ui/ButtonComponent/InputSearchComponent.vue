@@ -1,17 +1,22 @@
-<script setup lang='ts'>
-import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
+<script setup lang="ts">
+import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline';
 defineProps({
-    placeholder: { type: String, default: 'Search for anything..' },
+  placeholder: { type: String, default: 'Search for anything..' },
 });
-const modelValue = defineModel<string>()
-
+const modelValue = defineModel<string>();
 </script>
 
 <template>
-    <div class="relative">
-        <MagnifyingGlassIcon class="icon-input" />
-        <input v-model="modelValue" class="input" :placeholder="placeholder" type="text" name="search" />
-    </div>
+  <div class="relative">
+    <MagnifyingGlassIcon class="icon-input" />
+    <input
+      v-model="modelValue"
+      class="input"
+      :placeholder="placeholder"
+      type="text"
+      name="search"
+    />
+  </div>
 </template>
 
-<style scoped></style>
+<style class="sxmksk" scoped></style>

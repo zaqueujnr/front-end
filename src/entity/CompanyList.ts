@@ -1,28 +1,32 @@
-import Company from "./Company";
+import Company from './Company';
 
 export default class CompanyList {
-  public companies: Company[]
-  
+  public companies: Company[];
+
   constructor() {
-    this.companies = []
+    this.companies = [];
   }
   addCompany(companyData: Company) {
-    const company = new Company(companyData.companyId, companyData.name, companyData.email, companyData.cnpj,
-      companyData.endereco
-    )
-    this.companies.push(company)
+    const company = new Company(
+      companyData.companyId,
+      companyData.name,
+      companyData.email,
+      companyData.cnpj,
+      companyData.endereco,
+    );
+    this.companies.push(company);
   }
   addCompanies(companies: Company[]) {
-    companies.forEach(company => this.addCompany(company))
+    companies.forEach((company) => this.addCompany(company));
   }
   setCompanies(companies: Company[]) {
-    this.removeCompanies()
-    this.addCompanies(companies)
+    this.removeCompanies();
+    this.addCompanies(companies);
   }
   removeCompanies() {
-    this.companies = []
+    this.companies = [];
   }
   totalCompanies() {
-    return this.companies.length
+    return this.companies.length;
   }
 }

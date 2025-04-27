@@ -1,6 +1,6 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 defineProps({
-  index: {type: Number , default: true },
+  index: { type: Number, default: true },
   name: String,
   position: String,
   email: String,
@@ -9,14 +9,14 @@ defineProps({
 </script>
 
 <template>
-  <div class="rounded-lg bg-gray-100 p-4 shadow-md flex flex-col items-center text-center ">
+  <div class="rounded-lg bg-gray-100 p-4 shadow-md flex flex-col items-center text-center">
     <div class="w-100% h-100% overflow-hidden rounded-full">
-  <img
-    class="w-full h-full object-cover"
-    :src="`/assets/professional/pexels-${index + 1}.jpg`"
-    alt="Imagem"
-  />
-</div>
+      <img
+        class="w-full h-full object-cover"
+        :src="`/assets/professional/pexels-${index + 1}.jpg`"
+        alt="Imagem"
+      />
+    </div>
     <div class="mt-4 flex flex-col items-center">
       <div class="text-xs font-bold text-primary-500">{{ name }}</div>
       <div class="mt-1 font-bold text-gray-600">
