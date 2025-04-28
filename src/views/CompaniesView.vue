@@ -58,6 +58,7 @@ const buscarMais = async () => {
 </script>
 
 <template>
+  <h1 class="font-bold text-gray-600 mb-2">Encontre as empresas..</h1>
   <InputSearchComponent v-model="searchQuery" />
   <ButtonComponent spacing="mt-6" label="Buscar" @click="buscar" />
   <DynamicGridComponent
