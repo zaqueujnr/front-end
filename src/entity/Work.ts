@@ -1,12 +1,12 @@
 export default class Work {
-  constructor(
-    readonly workId: string,
-    readonly description: string,
-    readonly dateInit: string,
-    readonly dateEnd: string,
-    readonly typeContract: string,
-    readonly time: string,
-    readonly company: CompanyRef,
+  public constructor(
+    public readonly workId: string,
+    public readonly description: string,
+    public readonly dateInit: string,
+    public readonly dateEnd: string,
+    public readonly typeContract: string,
+    public readonly time: string,
+    public readonly company: CompanyRef,
   ) {
     this.dateInit = Work.formatDate(dateInit);
     this.dateEnd = Work.formatDate(dateEnd);

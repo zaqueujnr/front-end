@@ -3,10 +3,10 @@ import Company from './Company';
 export default class CompanyList {
   public companies: Company[];
 
-  constructor() {
+  public constructor() {
     this.companies = [];
   }
-  addCompany(companyData: Company) {
+  public addCompany(companyData: Company): void {
     const company = new Company(
       companyData.companyId,
       companyData.name,
@@ -16,17 +16,17 @@ export default class CompanyList {
     );
     this.companies.push(company);
   }
-  addCompanies(companies: Company[]) {
+  public addCompanies(companies: Company[]): void {
     companies.forEach((company) => this.addCompany(company));
   }
-  setCompanies(companies: Company[]) {
+  public setCompanies(companies: Company[]): void {
     this.removeCompanies();
     this.addCompanies(companies);
   }
-  removeCompanies() {
+  public removeCompanies(): void {
     this.companies = [];
   }
-  totalCompanies() {
+  public totalCompanies(): number {
     return this.companies.length;
   }
 }

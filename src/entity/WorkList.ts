@@ -1,12 +1,11 @@
 import Work from './Work';
 
 export default class WorkList {
-  public works: Work[];
+  public works: Work[] = [];
 
-  constructor() {
-    this.works = [];
-  }
-  addWork(work: Work) {
+  public constructor() {}
+
+  public addWork(work: Work): void {
     const workData = new Work(
       work.workId,
       work.description,
@@ -18,17 +17,21 @@ export default class WorkList {
     );
     this.works.push(workData);
   }
-  addWorks(works: Work[]) {
+
+  public addWorks(works: Work[]): void {
     works.forEach((work) => this.addWork(work));
   }
-  setWorks(works: Work[]) {
+
+  public setWorks(works: Work[]): void {
     this.removeWorks();
     this.addWorks(works);
   }
-  removeWorks() {
+
+  public removeWorks(): void {
     this.works = [];
   }
-  totalWorks() {
+
+  public totalWorks(): number {
     return this.works.length;
   }
 }

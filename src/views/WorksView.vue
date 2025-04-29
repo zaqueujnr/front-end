@@ -27,7 +27,7 @@ watch(workList, () => {
   isLoading.value = false;
 });
 
-const fetchAllWorks = async () => {
+const fetchAllWorks = async (): Promise<void> => {
   const workResult = await workGateway.getWorks();
   workList.addWorks(workResult.works);
 };
@@ -45,13 +45,13 @@ const fetchFiltered = async (): Promise<Work[]> => {
   return workResult.works;
 };
 
-const buscar = async () => {
+const buscar = async (): Promise<void> => {
   page = 1;
   const works = await fetchFiltered();
   workList.setWorks(works);
 };
 
-const buscarMais = async () => {
+const buscarMais = async (): Promise<void> => {
   page++;
   const works = await fetchFiltered();
   workList.addWorks(works);

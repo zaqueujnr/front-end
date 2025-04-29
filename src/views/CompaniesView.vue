@@ -26,7 +26,7 @@ watch(companyList, () => {
   isLoading.value = false;
 });
 
-const fetchAllCompanies = async () => {
+const fetchAllCompanies = async (): Promise<void> => {
   const companyResult = await companyGateway.getCompanies();
   companyList.addCompanies(companyResult.companies);
 };
@@ -44,13 +44,13 @@ const fetchFiltered = async (): Promise<Work[]> => {
   return companyResult.companies;
 };
 
-const buscar = async () => {
+const buscar = async (): Promise<void> => {
   page = 1;
   const companies = await fetchFiltered();
   companyList.setCompanies(companies);
 };
 
-const buscarMais = async () => {
+const buscarMais = async (): Promise<void> => {
   page++;
   const companies = await fetchFiltered();
   companyList.addCompanies(companies);

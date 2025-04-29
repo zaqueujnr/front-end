@@ -26,7 +26,7 @@ watch(professionalList, () => {
   isLoading.value = false;
 });
 
-const fetchAllProfessionals = async () => {
+const fetchAllProfessionals = async (): Promise<void> => {
   const professionalResult = await professionalGateway.getProfessionals();
   professionalList.addProfessionals(professionalResult.professionals);
 };
@@ -44,13 +44,13 @@ const fetchFiltered = async (): Promise<Professional[]> => {
   return professionalResult.professionals;
 };
 
-const buscar = async () => {
+const buscar = async (): Promise<void> => {
   page = 1;
   const professionals = await fetchFiltered();
   professionalList.setProfessionals(professionals);
 };
 
-const buscarMais = async () => {
+const buscarMais = async (): Promise<void> => {
   page++;
   const professionals = await fetchFiltered();
   professionalList.addProfessionals(professionals);

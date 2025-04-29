@@ -3,10 +3,10 @@ import Professional from './Professional';
 export default class ProfessionalList {
   public professionals: Professional[];
 
-  constructor() {
+  public constructor() {
     this.professionals = [];
   }
-  addProfessional(professional: Professional) {
+  public addProfessional(professional: Professional): void {
     const professionalData = new Professional(
       professional.professionalId,
       professional.name,
@@ -16,17 +16,17 @@ export default class ProfessionalList {
     );
     this.professionals.push(professionalData);
   }
-  addProfessionals(professionals: Professional[]) {
+  public addProfessionals(professionals: Professional[]): void {
     professionals.forEach((professional) => this.addProfessional(professional));
   }
-  setProfessionals(professionals: Professional[]) {
+  public setProfessionals(professionals: Professional[]): void {
     this.removeProfessionals();
     this.addProfessionals(professionals);
   }
-  removeProfessionals() {
+  public removeProfessionals(): void {
     this.professionals = [];
   }
-  totalProfessionals() {
+  public totalProfessionals(): number {
     return this.professionals.length;
   }
 }

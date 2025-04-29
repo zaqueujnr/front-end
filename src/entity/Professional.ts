@@ -1,9 +1,9 @@
 export default class Professional {
-  constructor(
-    readonly professionalId: string,
-    readonly name: string,
-    readonly email: string,
-    readonly position: string,
-    readonly salary: number,
+  public constructor(
+    public readonly professionalId: string,
+    public readonly name: string,
+    public readonly email: string,
+    public readonly position: string,
+    public readonly salary: number,
   ) {}
 }

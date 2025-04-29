@@ -25,14 +25,14 @@ watch(
   },
 );
 
-const onScroll = () => {
+const onScroll = (): void => {
   const container = dynamicGridContainer.value;
   const viewPortBottom =
     container.scrollTop + container.clientHeight >= container.scrollHeight - 10;
   if (!props.loading && viewPortBottom) emit('loadMore');
 };
 
-const scrollForTop = () => {
+const scrollForTop = (): void => {
   if (dynamicGridContainer.value) {
     dynamicGridContainer.value.scrollTo({ top: 0, behavior: 'auto' });
   }

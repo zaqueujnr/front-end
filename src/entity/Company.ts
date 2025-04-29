@@ -1,9 +1,9 @@
 export default class Company {
-  constructor(
-    readonly companyId: string,
-    readonly name: string,
-    readonly email: string,
-    readonly cnpj: string,
-    readonly endereco: string,
+  public constructor(
+    public readonly companyId: string,
+    public readonly name: string,
+    public readonly email: string,
+    public readonly cnpj: string,
+    public readonly endereco: string,
   ) {}
 }

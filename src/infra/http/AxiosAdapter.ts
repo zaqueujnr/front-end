@@ -1,13 +1,14 @@
+import type { Params } from '../gateways/GatewaysTypes';
 import type Http from './Http';
 import axios from 'axios';
 
 export default class AxiosAdapter implements Http {
-  constructor() {}
-  async get(url: string, params: any): Promise<any> {
+  public constructor() {}
+  public async get(url: string, params: Params): Promise<any> {
     const response = await axios.get(url, { params });
     return response.data;
   }
-  post(): Promise<any> {
+  public post(): Promise<any> {
     throw new Error('Method not implemented.');
   }
 }
