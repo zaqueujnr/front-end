@@ -1,5 +1,5 @@
 import type Http from '../http/Http';
-import type { Params, WorkGateway } from './GatewaysTypes';
+import type { Params, WorkGateway, WorkList } from './GatewaysTypes';
 
 export default class WorkGatewayHttp implements WorkGateway {
   public constructor(
@@ -7,7 +7,7 @@ export default class WorkGatewayHttp implements WorkGateway {
     public readonly baseUrl: string,
   ) {}
 
-  public async getWorks(params?: Params): Promise<{ data: any }> {
+  public async getWorks(params: Params): Promise<WorkList> {
     return await this.http.get(`${this.baseUrl}/work`, params);
   }
 }

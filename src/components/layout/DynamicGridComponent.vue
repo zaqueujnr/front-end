@@ -10,7 +10,7 @@ const props = defineProps({
   totalList: { type: Number, required: true },
   limit: { type: Number, required: true },
 });
-
+// eslint-disable-next-line
 const dynamicGridContainer = ref<HTMLDivElement | any>(null);
 
 const emit = defineEmits<{

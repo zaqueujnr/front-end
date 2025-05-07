@@ -36,9 +36,21 @@ export default [
           tabWidth: 2,
         },
       ],
-      '@typescript-eslint/explicit-function-return-type': 'error', // <<< OBRIGA TIPAGEM
-      '@typescript-eslint/explicit-member-accessibility': ['error', { accessibility: 'explicit' }], // <<< obriga public/private
-      '@typescript-eslint/explicit-module-boundary-types': 'error', // <<< força tipagem na borda (public methods)
+      '@typescript-eslint/explicit-function-return-type': 'error',
+      '@typescript-eslint/explicit-member-accessibility': ['error', { accessibility: 'explicit' }],
+      '@typescript-eslint/explicit-module-boundary-types': 'error',
+      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          vars: 'all',
+          varsIgnorePattern: '^_',
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
       ...prettierConfig.rules,
     },
   },

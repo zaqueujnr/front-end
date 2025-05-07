@@ -4,7 +4,7 @@ defineProps({
   name: String,
   position: String,
   email: String,
-  salary: String,
+  salary: Number,
 });
 </script>
 

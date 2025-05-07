@@ -29,4 +29,7 @@ export default class ProfessionalList {
   public totalProfessionals(): number {
     return this.professionals.length;
   }
+  public getProfessionals(): Professional[] {
+    return this.professionals;
+  }
 }

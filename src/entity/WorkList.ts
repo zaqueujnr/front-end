@@ -34,4 +34,8 @@ export default class WorkList {
   public totalWorks(): number {
     return this.works.length;
   }
+
+  public getWorks(): Work[] {
+    return this.works;
+  }
 }

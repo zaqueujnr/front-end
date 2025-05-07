@@ -2,8 +2,8 @@
 defineProps({
   index: { type: Number, required: true },
   description: String,
-  dateInit: String,
-  dateEnd: String,
+  dateInit: Date,
+  dateEnd: Date,
   typeContract: String,
   time: String,
   companyName: String,

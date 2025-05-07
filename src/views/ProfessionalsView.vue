@@ -18,7 +18,7 @@ onMounted(async () => {
   await fetchAllProfessionals();
 });
 
-watch(searchQuery, (_) => {
+watch(searchQuery, () => {
   buscar();
 });
 

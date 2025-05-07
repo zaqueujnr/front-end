@@ -3,13 +3,13 @@ import CompanyCardList from '@/components/features/CompanyCardList.vue';
 import DynamicGridComponent from '@/components/layout/DynamicGridComponent.vue';
 import ButtonComponent from '@/components/ui/ButtonComponent/ButtonComponent.vue';
 import InputSearchComponent from '@/components/ui/ButtonComponent/InputSearchComponent.vue';
+import type Company from '@/entity/Company';
 import CompanyList from '@/entity/CompanyList';
-import type Work from '@/entity/Work';
 import type { CompanyGateway, Params } from '@/infra/gateways/GatewaysTypes';
 import { inject, onMounted, reactive, ref, watch } from 'vue';
 
 const companyGateway = inject('companyGateway') as CompanyGateway;
-const companyList: any = reactive(new CompanyList());
+const companyList: CompanyList = reactive(new CompanyList());
 const searchQuery = ref('');
 const isLoading = ref(false);
 let page = 1;
@@ -18,7 +18,7 @@ onMounted(async () => {
   await fetchAllCompanies();
 });
 
-watch(searchQuery, (_) => {
+watch(searchQuery, () => {
   buscar();
 });
 
@@ -31,7 +31,7 @@ const fetchAllCompanies = async (): Promise<void> => {
   companyList.addCompanies(companyResult.companies);
 };
 
-const fetchFiltered = async (): Promise<Work[]> => {
+const fetchFiltered = async (): Promise<Company[]> => {
   isLoading.value = true;
 
   const params: Params = {

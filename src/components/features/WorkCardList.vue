@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type Work from '@/entity/Work';
 import WorkCardComponent from './WorkCardComponent.vue';
-
 defineProps(['workList']);
 </script>
 

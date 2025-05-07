@@ -1,4 +1,6 @@
+import type { Params } from '../gateways/GatewaysTypes';
+
 export default interface Http {
-  get(url: string, params: any): Promise<any>;
-  post(): Promise<any>;
+  get<T>(url: string, params: Params): Promise<T>;
+  post<T>(): Promise<T>;
 }

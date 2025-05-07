@@ -29,4 +29,7 @@ export default class CompanyList {
   public totalCompanies(): number {
     return this.companies.length;
   }
+  public getCompanies(): Company[] {
+    return this.companies;
+  }
 }

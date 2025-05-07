@@ -10,7 +10,7 @@ import type { WorkGateway } from '@/infra/gateways/GatewaysTypes';
 import { inject, onMounted, reactive, ref, watch } from 'vue';
 
 const workGateway = inject('workGateway') as WorkGateway;
-const workList: any = reactive(new WorkList());
+const workList: WorkList = reactive(new WorkList());
 const searchQuery = ref('');
 const isLoading = ref(false);
 let page = 1;
@@ -19,7 +19,7 @@ onMounted(async () => {
   await fetchAllWorks();
 });
 
-watch(searchQuery, (_) => {
+watch(searchQuery, () => {
   buscar();
 });
 
