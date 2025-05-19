@@ -11,9 +11,8 @@ import ProfessionalGatewayHttp from './infra/gateways/ProfessionalGatewayHttp';
 import CompanyGatewayHttp from './infra/gateways/CompanyGatewayHttp';
 
 const app = createApp(App);
-
 app.use(router);
-const baseUrl = 'http://localhost:3000';
+const baseUrl = import.meta.env.VITE_API_URL;
 const axiosAdapter = new AxiosAdapter();
 const workGateway = new WorkGatewayHttp(axiosAdapter, baseUrl);
 const professionalGateway = new ProfessionalGatewayHttp(axiosAdapter, baseUrl);
