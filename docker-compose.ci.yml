@@ -1,8 +1,9 @@
-front-test:
-  build:
-    context: ./
-    dockerfile: Dockerfile
-  container_name: front-test
-  environment:
-    VITE_API_URL: http://localhost:3000
-  entrypoint: ['npm', 'run', 'test']
+services:
+  front-test:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: front-test
+    environment:
+      VITE_API_URL: http://localhost:3000
+    entrypoint: ['npm', 'run', 'test']
