@@ -1,6 +1,8 @@
 services:
   front-test:
-    build: ./
+    build:
+      context: ./
+      dockerfile: Dockerfile
     container_name: front-test
     environment:
       VITE_API_URL: http://localhost:3000
