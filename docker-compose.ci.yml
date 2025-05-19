@@ -1,7 +1,7 @@
 services:
   front-test:
     build:
-      context: ./
+      context: .
       dockerfile: Dockerfile
     container_name: front-test
     environment:
