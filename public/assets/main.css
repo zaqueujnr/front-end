@@ -10,18 +10,16 @@
   font-weight: normal;
   box-sizing: border-box;
   max-height: 100vh;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 body {
-    margin: 0;
-    display: flex;
-    /* place-items: center; */
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    background-color: #f9f9f9;
-  }
+  margin: 0;
+  display: flex;
+  /* place-items: center; */
 
-
-
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
