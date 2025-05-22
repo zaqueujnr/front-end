@@ -1,1 +1,2 @@
 ALTERADO
+aldkaakas´káskc´sa
