@@ -41,6 +41,12 @@ const scrollForTop = (): void => {
 const isFirstPageOfResults = (totalList: number): boolean => {
   return totalList < props.limit + 1;
 };
+
+defineExpose({
+  onScroll,
+  scrollForTop,
+  dynamicGridContainer,
+});
 </script>
 
 <template>

@@ -20,8 +20,14 @@ defineProps({
           {{ description }}
         </a>
       </div>
-      <div class="mt-2 text-sm text-gray-600">{{ dateInit }}</div>
-      <div class="mt-2 text-sm text-gray-600">{{ dateEnd }}</div>
+      <div class="flex items-center gap-2">
+        <p class="text-sm font-semibold text-gray-600">Inicio:</p>
+        <div class="mt-2 text-sm text-gray-600">{{ dateInit?.toLocaleDateString('pt-BR') }}</div>
+      </div>
+      <div class="flex items-center gap-2">
+        <p class="text-sm font-semibold text-gray-600">Fim:</p>
+        <div class="mt-2 text-sm text-gray-600">{{ dateEnd?.toLocaleDateString('pt-BR') }}</div>
+      </div>
       <div class="flex items-center gap-2">
         <p class="text-sm font-semibold text-gray-600">Tipo de contratação:</p>
         <div class="text-sm text-gray-600">{{ typeContract }}</div>

@@ -1,0 +1,13 @@
+services:
+  front-test:
+    build: ./
+    container_name: front-test
+    ports:
+      - '3005:3000'
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      CHOKIDAR_USEPOLLING: 'true'
+      VITE_API_URL: http://localhost:3000
+    entrypoint: ['npm', 'run', 'test']

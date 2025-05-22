@@ -1,3 +1,4 @@
+import type Work from '@/entity/Work';
 import type Http from '../http/Http';
 import type { Params, WorkGateway, WorkList } from './GatewaysTypes';
 
@@ -8,6 +9,17 @@ export default class WorkGatewayHttp implements WorkGateway {
   ) {}
 
   public async getWorks(params: Params): Promise<WorkList> {
-    return await this.http.get(`${this.baseUrl}/work`, params);
+    const result: WorkList = await this.http.get(`${this.baseUrl}/work`, params);
+
+    const works = result.works.map((work: Work) => ({
+      ...work,
+      dateInit: new Date(work.dateInit),
+      dateEnd: new Date(work.dateEnd),
+    }));
+
+    return {
+      ...result,
+      works,
+    };
   }
 }

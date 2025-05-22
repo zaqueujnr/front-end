@@ -9,7 +9,7 @@ defineProps(['workList']);
     v-for="(item, index) in workList.works as Work[]"
     :key="item.workId"
     :index="index"
-    :company-name="item.company.name || '############'"
+    :company-name="item.company.name"
     :description="item.description"
     :date-end="item.dateEnd"
     :date-init="item.dateInit"
