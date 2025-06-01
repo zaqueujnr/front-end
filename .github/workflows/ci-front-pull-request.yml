@@ -1,4 +1,4 @@
-name: CI - backend tests pull
+name: CI - frontend tests pull
 
 on:
   pull_request:
@@ -8,13 +8,13 @@ on:
 
 jobs:
   back_end_tests_pull:
-    name: Backend CI pull
+    name: Frontend CI pull
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Execução CI back-end
+      - name: Execução CI front-end
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
