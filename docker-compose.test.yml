@@ -1,6 +1,6 @@
 services:
   front-test:
-    build: ./
+    build: .
     container_name: front-test
     ports:
       - '3005:3000'
