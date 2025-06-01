@@ -6,7 +6,7 @@ on:
     - main
 
 jobs:
-  back_deploy_prod:
+  front_deploy_prod:
     if: github.ref == 'refs/heads/main'
     name: Frontend Prod CD
 

@@ -6,7 +6,7 @@ on:
     - develop
 
 jobs:
-  back_deploy_homolog:
+  front_deploy_homolog:
     if: github.ref == 'refs/heads/develop'
     name: Frontend Homolog CD
     runs-on: ubuntu-latest

@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  back_end_tests_pull:
+  front_end_tests_pull:
     name: Frontend CI pull
     runs-on: ubuntu-latest
     steps:
