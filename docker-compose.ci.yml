@@ -4,6 +4,5 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: front-test
-    environment:
-      VITE_API_URL: http://localhost:3000
+    # env_file: .env.test
     entrypoint: ['npm', 'run', 'test']
