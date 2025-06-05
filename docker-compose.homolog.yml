@@ -1,0 +1,11 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.build
+    container_name: front-homolog
+    # env_file: .env.hml
+    command: npm run start:homolog
+    restart: unless-stopped
+    environment:
+      VITE_API_URL: /api
